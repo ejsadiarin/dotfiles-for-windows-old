@@ -1,0 +1,27 @@
+# Ignore system and editor files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+/.git/*
+.git
+/.git
+
+# Ignore backup files
+*~
+
+# Ignore compiled files
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore temporary files and directories
+.tmp/
+.temp/
+.temp.*
+.temp*
+.temp-* 
+*.tmp
+
