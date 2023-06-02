@@ -53,6 +53,7 @@ map <c-\> <Action>(ActivateTerminalToolWindow)
 map <c-z> <Action>(ToggleDistractionFreeMode)
 map <c-|> <Action>(SplitVertically)
 map <c-=> <Action>(Unsplit)
+" <c-s-l> or ctrl shift l --> for select all occurences, ENABLED via IDE keymaps
 
 " -- g Maps -> go to -- "
 map gi <Action>(QuickImplementations)
@@ -65,12 +66,14 @@ map gsd ds
 map <a-r> <Action>(Run)
 map <a-d> <Action>(Debug)
 map <a-c> <Action>(Stop)
-map \b <Action>(ToggleLineBreakpoint)
+map <leader>db <Action>(ToggleLineBreakpoint)
+" -- TODO map all debug like step into, step over, pause, terminate, etc. -- "
 
 " -- Leader Maps -- "
 map <leader>fr <Action>(RecentFiles)
 map <leader>cf <Action>(ReformatCode)
 map <leader>cr <Action>(RenameElement)
+map <leader>cd <Action>(ShowErrorDescription)
 
 " Multi-cursor
 map <leader>cm <a-n>
