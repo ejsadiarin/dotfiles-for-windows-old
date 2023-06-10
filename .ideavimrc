@@ -23,6 +23,10 @@ set clipboard+=ideaput
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 inoremap kj <Esc>
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
 nnoremap <TAB> :action NextTab<CR>
 nnoremap <s-TAB> :action PreviousTab<CR>
 nnoremap \e :e ~/.ideavimrc<CR>
@@ -51,13 +55,14 @@ sethandler <c-v> n:vim i:ide
 " -- General Utils Maps -- "
 map <c-\> <Action>(ActivateTerminalToolWindow)
 map <c-z> <Action>(ToggleDistractionFreeMode)
-map <c-|> <Action>(SplitVertically)
+map <c-|> <Actionj(SplitVertically)
 map <c-=> <Action>(Unsplit)
 " <c-s-l> or ctrl shift l --> for select all occurences, ENABLED via IDE keymaps
 map <c-f> <Action>(Find)
 
 " -- g Maps -> go to -- "
 map gi <Action>(QuickImplementations)
+map gI <Action>(GotoImplementation)
 " map gd -> has native Go-to-Definition, jumping files
 map gr <Action>(ShowUsages)
 map gR <Action>(FindUsages)
@@ -70,11 +75,15 @@ map <a-r> <Action>(Run)
 map <a-d> <Action>(Debug)
 map <a-c> <Action>(Stop)
 map <leader>db <Action>(ToggleLineBreakpoint)
+map <leader>di <Action>(StepInto)
+map <leader>do <Action>(StepOut)
+map <leader>dO <Action>(StepOver)
 " -- TODO map all debug like step into, step over, pause, terminate, etc. -- "
 
 " -- Leader Maps -- "
 map <leader>fr <Action>(RecentFiles)
 map <leader>ff <Action>(GotoFile)
+map <leader>fn <Action>(NewFile)
 map <leader>cf <Action>(ReformatCode)
 map <leader>cr <Action>(RenameElement)
 map <leader>cd <Action>(ShowErrorDescription)
@@ -85,3 +94,4 @@ map <leader>bd <Action>(CloseContent)
 map <leader>cm <a-n>
 map <leader>a <Action>(Annotate)
 map <leader>e :NERDTreeToggle<CR>
+map <leader>bn <Action>(ShowNavBar)
