@@ -53,11 +53,12 @@ sethandler <c-v> n:vim i:ide
 "" -- see Actions List here: -- https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
 
 " -- General Utils Maps -- "
-map <c-\> <Action>(ActivateTerminalToolWindow)
+" map <c-\> <Action>(ActivateTerminalToolWindow) 
+" --> already mapped to <c-`> (VSCODE SHORTCUT)
 map <c-z> <Action>(ToggleDistractionFreeMode)
-map <c-|> <Actionj(SplitVertically)
+map <c-\> <Action>(SplitVertically)
 map <c-=> <Action>(Unsplit)
-" <c-s-l> or ctrl shift l --> for select all occurences, ENABLED via IDE keymaps
+" <c-s-l> or ctrl shift l --> for select all occurences (VSCODE SHORTCUT)
 map <c-f> <Action>(Find)
 
 " -- g Maps -> go to -- "
